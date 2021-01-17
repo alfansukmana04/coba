@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H8 Model Deployment</title>
+</head>
+<body>
+    <div class="form">
+        <h1>classifier</h1>
+        <form action="{{ url_for('predict') }}" method='POST'>
+            <input type='text' name='Temp' placeholder='Tmp'/>
+	    <input type='text' name='Humid' placeholder='Humidity'/>
+            <input type='text' name='Press' placeholder='Pressure'/>
+            <button type='submit' class='btn btn-primary btn-block btn-large'>Predict</button>
+        </form>
+        <p class='message'>{{ prediction_text }}</p>
+    </div>
+</body>
+</html>
